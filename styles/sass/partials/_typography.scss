@@ -1,0 +1,114 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+@font-face {
+    font-family: "Playfair Display SC";
+    src: url('../fonts/Playfair_Display_SC/PlayfairDisplaySC-BlackItalic.ttf'); 
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('../fonts/Lato/Lato-Regular.ttf'); 
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('../fonts/Lato/Lato-Bold.ttf'); 
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('../fonts/Lato/Lato-Light.ttf'); 
+    font-weight: lighter;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: calc(1.25 * $baseFontSize);
+    color: $black;
+    font-family: $baseFont;
+    font-weight: normal;
+    text-align: left;
+    line-height: calc(2 * $baseFontSize);
+    letter-spacing: calc(0.125 * $baseFontSize);
+}
+
+h1 {
+    font-size: calc(5.438 * $baseFontSize);
+    font-family: $baseFont;
+    font-weight: bold;
+    line-height: calc(3.625 * $baseFontSize);
+    letter-spacing: calc(0.563 * $baseFontSize);
+}
+
+h1.main {
+    font-size: calc(3.875 * $baseFontSize);
+    color: $spruce;
+    font-family: $baseFont;
+    font-weight: bold;
+    line-height: calc(3.625 * $baseFontSize);
+    letter-spacing: calc(0.419 * $baseFontSize);
+}
+
+h2 {
+    font-size: calc(2.188 * $baseFontSize);
+    color: $spruce;
+    font-family: $baseFont;
+    font-weight: bold;
+    line-height: calc(3.625 * $baseFontSize);
+    letter-spacing: calc(0.238 * $baseFontSize);
+}
+
+h3 {
+    font-size: calc(1.875 * $baseFontSize);
+    color: $spruce;
+    font-family: $baseFont;
+    font-weight: bold;
+    line-height: calc(3.625 * $baseFontSize);
+    letter-spacing: calc(0.2 * $baseFontSize);
+}
+
+button, .button {
+    font-size: calc(1.25 * $baseFontSize);
+    color: white;
+    font-family: $logoFont;
+    line-height: calc(2 * $baseFontSize);
+    letter-spacing: calc(0.063 * $baseFontSize);
+    text-align: center;
+}
+
+.navBar {
+    font-size: calc(1.25 * $baseFontSize);
+    font-family: $baseFont;
+    font-weight: bold;
+    line-height: calc(1.813 * $baseFontSize);
+    letter-spacing: calc(0.063 * $baseFontSize);
+    text-align: center;
+}
+
+.placeholder {
+    font-size: calc(1.25 * $baseFontSize);
+    font-family: $baseFont;
+    font-weight: lighter;
+    line-height: calc(2 * $baseFontSize);
+    letter-spacing: calc(0.125 * $baseFontSize);
+}
+
+.logoSmall {
+    font-size: calc(1.25 * $baseFontSize);
+    color: $greenishCyan;
+    font-family: $logoFont;
+    text-align: center;
+}
+
+.logoLarge {
+    font-size: calc(6.95 * $baseFontSize);
+    color: $twilightBlue;
+    font-family: $logoFont;
+}

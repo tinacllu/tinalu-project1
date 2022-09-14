@@ -1,0 +1,20 @@
+@use "./variables" as *;
+
+@mixin flexStyle($JC: center, $AI: center, $wrap: wrap) {
+    display: flex;
+    justify-content: $JC;
+    align-items: $AI;
+    flex-wrap: $wrap;
+  }
+
+@mixin fontStyle($size, $colour, $family: $baseFont, $weight: normal, $align: left) {
+    font-size: $size;
+    color: $colour;
+    font-family: $family;
+    font-weight: $weight;
+    text-align: $align;
+}
+
+// h1 {
+//     @include fontStyle(55px, red, bold, center);
+// }

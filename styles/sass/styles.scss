@@ -1,0 +1,15 @@
+@use "./partials/setup";
+@use "./partials/variables" as *;
+@use "./partials/typography";
+@use "./partials/mixins" as *;
+@use "./partials/baseStyles";
+@use "./partials/header";
+@use "./partials/sections";
+@use "./partials/footer";
+
+
+// h1 {
+//     @include fontStyle(55px, red, bold, center);
+// }
+
+
