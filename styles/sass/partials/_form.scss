@@ -1,0 +1,35 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px 0;
+    button {
+        width: 100%;
+        border: none;
+    }
+}
+input, textarea {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    transition: 2ms;
+    &:focus, &:hover {
+        border: 2px solid $greenishCyan;
+    }
+}
+
+input {
+    border-bottom: 2px solid $greenishCyan;
+    width: 48%;
+    min-width: 250px;
+}
+
+textarea {
+    border: 2px solid $greenishCyan;
+    width: 100%;
+    margin: 15px 0;
+}
+

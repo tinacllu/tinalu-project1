@@ -1,0 +1,96 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+html.blog {
+    background-color: $iceBlue;
+    header {
+        background-image: url("../assets/blog-image-1.jpg");
+    }
+    .headerContent {
+        color: white;
+        position: static;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 55vh;
+    }
+    h3 {
+        color: $black;
+    }
+
+    h4 {
+        color: $twilightBlue;
+    }
+
+    h5 {
+        color: $twilightBlue;
+    }
+
+    h6 {
+        color: $twilightBlue;
+    }
+
+    .findOutMore {
+        color: $spruce;
+        font-weight: bold;
+        padding: 0;
+    }
+}
+
+.post {
+    width: 65%;
+    border-bottom: 5px solid $greenishCyan;
+    border-right: 5px solid $greenishCyan;
+    padding: 0 10px 10px 0;
+    transform: translateY(-15vh);
+    .imgContainer {
+        width: calc(100% + 15px);
+        background-color: $greenishCyan;
+        box-shadow: inset 0px -10px white;
+        border-right: 5px solid $greenishCyan;
+        img {
+            transform: translateY(-25px);
+            width: calc(100% - 10px);
+        }  
+    }
+}
+
+.sidebar {
+    width: 20%;
+    position: absolute;
+    top: calc(110vh);
+    right: 0vw;
+    background-color: white;
+    padding: 0 0 25px 25px;
+
+    img {
+        width: 100%;
+        transform: translateY(-25px);
+    }
+
+    .recentPosts li::before {
+        content: "\2022"; 
+        color: $greenishCyan;
+        font-weight: bold;
+        display: inline-block;
+    }
+}
+
+.comments {
+    width: 65%;
+    .comment1, .comment2 {
+        display: flex;
+        align-items: center;
+        .imgContainer {
+            width: 50%;
+            margin: 25px;
+            height: auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+

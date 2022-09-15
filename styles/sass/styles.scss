@@ -6,10 +6,6 @@
 @use "./partials/header";
 @use "./partials/sections";
 @use "./partials/footer";
-
-
-// h1 {
-//     @include fontStyle(55px, red, bold, center);
-// }
-
+@use "./partials/form";
+@use "./partials/blog";
 

@@ -92,7 +92,7 @@ button, .button {
     text-align: center;
 }
 
-.placeholder {
+input::placeholder, textarea::placeholder {
     font-size: calc(1.25 * $baseFontSize);
     font-family: $baseFont;
     font-weight: lighter;
