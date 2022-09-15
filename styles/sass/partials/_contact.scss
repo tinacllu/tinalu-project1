@@ -1,0 +1,39 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+html.contact {
+    background-color: $iceBlue;
+}
+.contact.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.getInTouch {
+    background-color: white;
+    width: 65%;
+    padding: 0 50px;
+    box-shadow: 20px 20px $greenishCyan;
+    transform: translateY(-15vh);
+}
+
+.contactInfo {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    align-self: center;
+    .socialMedia {
+        display: flex;
+        li:first-child a {
+            padding-left: 0;
+        }
+    }
+    .email {
+        font-weight: bold;
+        a {
+            padding: 0;
+        }
+    }
+}

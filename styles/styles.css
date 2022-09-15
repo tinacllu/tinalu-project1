@@ -423,7 +423,7 @@ button:hover, button:focus {
 header {
   background-image: url(../assets/home-image-1.jpg);
   background-size: cover;
-  height: 90vh;
+  height: 80vh;
   position: relative;
 }
 header .headerContent {
@@ -478,6 +478,28 @@ header .headerImage img {
 }
 .navBar ul li:hover, .navBar ul li:focus {
   color: #50E3C2;
+}
+
+html.blog header, html.contact header {
+  background-image: url("../assets/blog-image-1.jpg");
+}
+html.blog .headerContent, html.contact .headerContent {
+  color: white;
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 55vh;
+}
+
+html.contact header {
+  background-image: url("../assets/contact-image-1.jpg");
 }
 
 .guyana {
@@ -743,23 +765,6 @@ textarea {
 html.blog {
   background-color: #FAFFFE;
 }
-html.blog header {
-  background-image: url("../assets/blog-image-1.jpg");
-}
-html.blog .headerContent {
-  color: white;
-  position: static;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  height: 55vh;
-}
 html.blog h3 {
   color: #2C2C2C;
 }
@@ -785,6 +790,9 @@ html.blog .findOutMore {
   padding: 0 10px 10px 0;
   -webkit-transform: translateY(-15vh);
           transform: translateY(-15vh);
+}
+.post .wrapper {
+  margin-left: 10%;
 }
 .post .imgContainer {
   width: calc(100% + 15px);
@@ -822,6 +830,9 @@ html.blog .findOutMore {
 .comments {
   width: 65%;
 }
+.comments .wrapper {
+  margin-left: 10%;
+}
 .comments .comment1, .comments .comment2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -832,9 +843,61 @@ html.blog .findOutMore {
 }
 .comments .comment1 .imgContainer, .comments .comment2 .imgContainer {
   width: 50%;
-  margin: 25px;
+  margin: 25px 25px 25px 0;
   height: auto;
 }
 .comments .comment1 .imgContainer img, .comments .comment2 .imgContainer img {
   width: 100%;
+}
+
+html.contact {
+  background-color: #FAFFFE;
+}
+
+.contact.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.getInTouch {
+  background-color: white;
+  width: 65%;
+  padding: 0 50px;
+  -webkit-box-shadow: 20px 20px #50E3C2;
+          box-shadow: 20px 20px #50E3C2;
+  -webkit-transform: translateY(-15vh);
+          transform: translateY(-15vh);
+}
+
+.contactInfo {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.contactInfo .socialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contactInfo .socialMedia li:first-child a {
+  padding-left: 0;
+}
+.contactInfo .email {
+  font-weight: bold;
+}
+.contactInfo .email a {
+  padding: 0;
 }

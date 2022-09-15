@@ -4,7 +4,7 @@
 header {
     background-image: url(../assets/home-image-1.jpg);
     background-size: cover;
-    height: 90vh;
+    height: 80vh;
     position: relative;
     .headerContent {
         position: absolute; 
@@ -38,5 +38,25 @@ header {
                 color: $greenishCyan;
             }
         }
+    }
+}
+
+html.blog, html.contact {
+    header {
+        background-image: url("../assets/blog-image-1.jpg");
+    }
+    .headerContent {
+        color: white;
+        position: static;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 55vh;
+    }
+}
+
+html.contact {
+    header {
+        background-image: url("../assets/contact-image-1.jpg");
     }
 }
