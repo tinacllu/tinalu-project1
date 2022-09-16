@@ -7,13 +7,9 @@
 @use "./variables" as *;
 
 //desktop
-// @media (max-width: 1440px) {
-//     /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
-//     body {
-//         background-color: tomato;
-//     }
-    
-// }
+@media (max-width: 1440px) {
+
+}
 
 //laptop
 @media (max-width: 1200px) {
@@ -29,10 +25,29 @@
             left: clamp(10%, 2vw, 32%);
         }
     }
-
 }
 
 @media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        background-color: transparent;
+        border: none;
+    }
+    .navLinks {
+        display: none;
+        width: 100%;
+        ul {
+            flex-direction: column;
+            align-items: flex-end;
+            a {
+                padding-right: 0;
+            }
+        }
+    }
+    .hamburger, .break {
+        display: block;
+    }
+    
     html.home {
         .guyanaFlex {
             flex-direction: column;
@@ -73,6 +88,25 @@
             display: none;
         }
     }
+    html.contact {
+        .contact.wrapper {
+            flex-direction: column;
+        }
+        .getInTouch, .contactInfo {
+            width: 100%;
+        }
+        .contactInfo {
+            transform: translateY(0vh);
+            text-align: center;
+            .socialMedia {
+                justify-content: center;
+            }
+        }
+    }
+    input {
+        min-width: 0px;
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -81,6 +115,7 @@
             display: none;
         }
     }
+
 }
 
 @media (max-width: 360px) {
@@ -88,5 +123,5 @@
 }
 
 @media (max-width: 320px) {
-
+    
 }
