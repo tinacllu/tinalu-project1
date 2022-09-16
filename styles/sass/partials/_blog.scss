@@ -3,32 +3,47 @@
 
 html.blog {
     background-color: $iceBlue;
+
+    h2 {
+        margin-bottom: 0;
+    }
     h3 {
         color: $black;
     }
 
     h4 {
         color: $twilightBlue;
+        margin: 0;
     }
 
     h5 {
         color: $twilightBlue;
+        margin: 0;
     }
 
     h6 {
         color: $twilightBlue;
-    }
+        font-weight: normal;
+        font-style: italic;
+        margin: 0;
+    } 
 
     .findOutMore {
+        display: block;
         color: $spruce;
         font-weight: bold;
         padding: 0;
+        margin-bottom: 30px;
     }
 }
 
 .post {
     .wrapper {
         margin-left: 10%;
+        padding-right: 10%;
+        .bold {
+            font-weight: bold;
+        }
     }
     width: 65%;
     border-bottom: 5px solid $greenishCyan;
@@ -54,6 +69,9 @@ html.blog {
     right: 0vw;
     background-color: white;
     padding: 0 0 25px 25px;
+    p {
+        margin-bottom: 0;
+    }
 
     img {
         width: 100%;
@@ -75,15 +93,23 @@ html.blog {
     }
     .comment1, .comment2 {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        justify-content: space-between;
         .imgContainer {
-            width: 50%;
-            margin: 25px 25px 25px 0;
-            height: auto;
+            margin: 10px 25px 0 0;
+            min-width: 15vh;
             img {
                 width: 100%;
             }
         }
+        .contentContainer {
+            p {
+                margin-top: 0;
+            }    
+        }
+    }
+    .comment1 {
+        margin-bottom: 75px;
     }
 }
 

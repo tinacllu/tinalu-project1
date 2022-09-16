@@ -22,8 +22,9 @@ html.contact {
     width: 30%;
     display: flex;
     flex-direction: column;
-    padding: 50px;
-    align-self: center;
+    padding: 0 50px;
+    // align-self: center;
+    transform: translateY(10vh);
     .socialMedia {
         display: flex;
         li:first-child a {

@@ -3,20 +3,24 @@
 
 .guyana {
     background-color: $iceBlue;
-    padding: 100px 0 50px;
-    .wrapper {
+    padding: 150px 0 50px;
+    .guyanaFlex {
         @include flexStyle(space-between, center, no-wrap);
         padding: 100px 0;
         .contentContainer {
             width: 55%;
             padding-right: 30px;
+            p {
+                margin: 0 0 30px;
+            }
         }
         .imgContainer {
-            width: 40%;
+            width: 25%;
             @include flexStyle(flex-end)
         }
         img {
             box-shadow: -15px 15px $greenishCyan;
+            width: 100%;
         }
     }
 }
@@ -27,7 +31,6 @@
         @include flexStyle(space-between, center);
         .galleryItem{
             padding: 100px 0;
-            // width: calc(100%/3);
             width: 30%;
             display: flex;
             justify-content: center;
@@ -75,6 +78,9 @@
             }
             a {
                 padding: 0;
+                &:hover, &:focus {
+                    text-decoration: underline;
+                }
             }
 
         }
@@ -85,7 +91,7 @@
     background-color: $lightLightBlue;
     display: flex;
     flex-direction: column;
-    // max-width: 1400px;
+    max-width: 2000px;
     .planAhead, .newLocations {
         display: flex;
         justify-content: space-between;
@@ -93,17 +99,17 @@
         .imgContainer, .contentContainer {
             width: 45%;
         }
+        p {
+            margin-bottom: 30px;
+        }
     }
 
     .planAhead {
         .contentContainer {
-            // margin: 50px 50px 25px 0;
-            padding: 50px 150px 25px 0;
+            padding: 5vw 12vw 5vw 0;
         }
         .imgContainer {
-            position: relative;
-            top: -30px;
-            left: 0px;
+            transform: translateY(-7.5vh);
         }
         img {
             box-shadow: 20px 20px $greenishCyan;
@@ -114,20 +120,16 @@
         flex-direction: row-reverse;
         text-align: right;
         .contentContainer {
-            // position: relative;
-            // right: -20px;
-            padding: 25px 0 25px 150px;
+            padding: 5vw 0 5vw 12vw;
         }
         .imgContainer {
-            position: relative;
-            bottom: -30px;
+            transform: translateY(7.5vh);
         }
         img {
             box-shadow: -20px 20px $greenishCyan;
             width: 100%;
         }
     }
-
     .banner img {
         width: 100%;
     }
@@ -139,6 +141,9 @@
     .wrapper {
         text-align: center;
         padding: 100px;
+        p {
+            margin-bottom: 30px;
+        }
     }
 }
 

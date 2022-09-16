@@ -4,22 +4,24 @@
 header {
     background-image: url(../assets/home-image-1.jpg);
     background-size: cover;
-    height: 80vh;
+    height: 90vh;
     position: relative;
     .headerContent {
         position: absolute; 
-        top: 45%;
+        top: 50%;
         left: 32%;
         z-index: 10;
+        h1 {
+            font-size: clamp((calc(2.5 * $baseFontSize)), 5vw, (calc(3.875 * $baseFontSize)));
+        }
         span {
+            font-size: clamp((calc(3 * $baseFontSize)), 10vw, (calc(6.95 * $baseFontSize)));
             display: block;
-            line-height: calc(8 * $baseFontSize);
+            line-height: clamp((calc(3 * $baseFontSize)), 10vw, (calc(8 * $baseFontSize)));
         }
     }
     .headerImage {
-        position: absolute;
-        bottom: -15%;
-        left: 0px;
+        transform: translateY(20vh);
         width: 40%;
         img {
             width: 100%;
@@ -46,17 +48,24 @@ html.blog, html.contact {
         background-image: url("../assets/blog-image-1.jpg");
     }
     .headerContent {
+        h1 {
+            font-size: clamp((calc(3.5 * $baseFontSize)), 10vw, (calc(5.438 * $baseFontSize)))
+        }
         color: white;
         position: static;
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
         height: 55vh;
+        max-height: 60vh;
     }
 }
 
 html.contact {
     header {
         background-image: url("../assets/contact-image-1.jpg");
+        h1 {
+            margin-left: 5vw;
+        }
     }
 }

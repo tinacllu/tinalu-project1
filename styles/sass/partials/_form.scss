@@ -25,11 +25,15 @@ input {
     border-bottom: 2px solid $greenishCyan;
     width: 48%;
     min-width: 250px;
+    margin-top: 10px;
 }
 
 textarea {
     border: 2px solid $greenishCyan;
     width: 100%;
-    margin: 15px 0;
+    margin: 50px 0;
+    height: 25vh;
+    min-height: 200px;
+    max-height: 250px;
 }
 

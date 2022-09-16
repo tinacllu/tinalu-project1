@@ -364,6 +364,7 @@ input::placeholder, textarea::placeholder {
 
 html {
   max-width: 2000px;
+  margin: 0 auto;
 }
 
 .wrapper {
@@ -423,23 +424,26 @@ button:hover, button:focus {
 header {
   background-image: url(../assets/home-image-1.jpg);
   background-size: cover;
-  height: 80vh;
+  height: 90vh;
   position: relative;
 }
 header .headerContent {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 32%;
   z-index: 10;
 }
+header .headerContent h1 {
+  font-size: clamp(2.5rem, 5vw, 3.875rem);
+}
 header .headerContent span {
+  font-size: clamp(3rem, 10vw, 6.95rem);
   display: block;
-  line-height: 8rem;
+  line-height: clamp(3rem, 10vw, 8rem);
 }
 header .headerImage {
-  position: absolute;
-  bottom: -15%;
-  left: 0px;
+  -webkit-transform: translateY(20vh);
+          transform: translateY(20vh);
   width: 40%;
 }
 header .headerImage img {
@@ -496,17 +500,24 @@ html.blog .headerContent, html.contact .headerContent {
       -ms-flex-align: end;
           align-items: flex-end;
   height: 55vh;
+  max-height: 60vh;
+}
+html.blog .headerContent h1, html.contact .headerContent h1 {
+  font-size: clamp(3.5rem, 10vw, 5.438rem);
 }
 
 html.contact header {
   background-image: url("../assets/contact-image-1.jpg");
 }
+html.contact header h1 {
+  margin-left: 5vw;
+}
 
 .guyana {
   background-color: #FAFFFE;
-  padding: 100px 0 50px;
+  padding: 150px 0 50px;
 }
-.guyana .wrapper {
+.guyana .guyanaFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -520,12 +531,15 @@ html.contact header {
       flex-wrap: no-wrap;
   padding: 100px 0;
 }
-.guyana .wrapper .contentContainer {
+.guyana .guyanaFlex .contentContainer {
   width: 55%;
   padding-right: 30px;
 }
-.guyana .wrapper .imgContainer {
-  width: 40%;
+.guyana .guyanaFlex .contentContainer p {
+  margin: 0 0 30px;
+}
+.guyana .guyanaFlex .imgContainer {
+  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -538,9 +552,10 @@ html.contact header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.guyana .wrapper img {
+.guyana .guyanaFlex img {
   -webkit-box-shadow: -15px 15px #50E3C2;
           box-shadow: -15px 15px #50E3C2;
+  width: 100%;
 }
 
 .gallery {
@@ -644,6 +659,9 @@ html.contact header {
 .itemContainer .items .infoContainer a {
   padding: 0;
 }
+.itemContainer .items .infoContainer a:hover, .itemContainer .items .infoContainer a:focus {
+  text-decoration: underline;
+}
 
 .planning {
   background-color: #D2F9F1;
@@ -654,6 +672,7 @@ html.contact header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 2000px;
 }
 .planning .planAhead, .planning .newLocations {
   display: -webkit-box;
@@ -667,13 +686,15 @@ html.contact header {
 .planning .planAhead .imgContainer, .planning .planAhead .contentContainer, .planning .newLocations .imgContainer, .planning .newLocations .contentContainer {
   width: 45%;
 }
+.planning .planAhead p, .planning .newLocations p {
+  margin-bottom: 30px;
+}
 .planning .planAhead .contentContainer {
-  padding: 50px 150px 25px 0;
+  padding: 5vw 12vw 5vw 0;
 }
 .planning .planAhead .imgContainer {
-  position: relative;
-  top: -30px;
-  left: 0px;
+  -webkit-transform: translateY(-7.5vh);
+          transform: translateY(-7.5vh);
 }
 .planning .planAhead img {
   -webkit-box-shadow: 20px 20px #50E3C2;
@@ -688,11 +709,11 @@ html.contact header {
   text-align: right;
 }
 .planning .newLocations .contentContainer {
-  padding: 25px 0 25px 150px;
+  padding: 5vw 0 5vw 12vw;
 }
 .planning .newLocations .imgContainer {
-  position: relative;
-  bottom: -30px;
+  -webkit-transform: translateY(7.5vh);
+          transform: translateY(7.5vh);
 }
 .planning .newLocations img {
   -webkit-box-shadow: -20px 20px #50E3C2;
@@ -709,6 +730,9 @@ html.contact header {
 .freeTrip .wrapper {
   text-align: center;
   padding: 100px;
+}
+.freeTrip .wrapper p {
+  margin-bottom: 30px;
 }
 
 .testList {
@@ -754,33 +778,47 @@ input {
   border-bottom: 2px solid #50E3C2;
   width: 48%;
   min-width: 250px;
+  margin-top: 10px;
 }
 
 textarea {
   border: 2px solid #50E3C2;
   width: 100%;
-  margin: 15px 0;
+  margin: 50px 0;
+  height: 25vh;
+  min-height: 200px;
+  max-height: 250px;
 }
 
 html.blog {
   background-color: #FAFFFE;
+}
+html.blog h2 {
+  margin-bottom: 0;
 }
 html.blog h3 {
   color: #2C2C2C;
 }
 html.blog h4 {
   color: #063974;
+  margin: 0;
 }
 html.blog h5 {
   color: #063974;
+  margin: 0;
 }
 html.blog h6 {
   color: #063974;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
 }
 html.blog .findOutMore {
+  display: block;
   color: #0C5F4C;
   font-weight: bold;
   padding: 0;
+  margin-bottom: 30px;
 }
 
 .post {
@@ -793,6 +831,10 @@ html.blog .findOutMore {
 }
 .post .wrapper {
   margin-left: 10%;
+  padding-right: 10%;
+}
+.post .wrapper .bold {
+  font-weight: bold;
 }
 .post .imgContainer {
   width: calc(100% + 15px);
@@ -814,6 +856,9 @@ html.blog .findOutMore {
   right: 0vw;
   background-color: white;
   padding: 0 0 25px 25px;
+}
+.sidebar p {
+  margin-bottom: 0;
 }
 .sidebar img {
   width: 100%;
@@ -837,17 +882,25 @@ html.blog .findOutMore {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .comments .comment1 .imgContainer, .comments .comment2 .imgContainer {
-  width: 50%;
-  margin: 25px 25px 25px 0;
-  height: auto;
+  margin: 10px 25px 0 0;
+  min-width: 15vh;
 }
 .comments .comment1 .imgContainer img, .comments .comment2 .imgContainer img {
   width: 100%;
+}
+.comments .comment1 .contentContainer p, .comments .comment2 .contentContainer p {
+  margin-top: 0;
+}
+.comments .comment1 {
+  margin-bottom: 75px;
 }
 
 html.contact {
@@ -883,9 +936,9 @@ html.contact {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px;
-  -ms-flex-item-align: center;
-      align-self: center;
+  padding: 0 50px;
+  -webkit-transform: translateY(10vh);
+          transform: translateY(10vh);
 }
 .contactInfo .socialMedia {
   display: -webkit-box;
@@ -900,4 +953,75 @@ html.contact {
 }
 .contactInfo .email a {
   padding: 0;
+}
+
+@media (max-width: 1024px) {
+  html.home .headerImage {
+    display: none;
+  }
+  html.home .headerContent {
+    left: clamp(10%, 2vw, 32%);
+  }
+}
+@media (max-width: 768px) {
+  html.home .guyanaFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px 0;
+  }
+  html.home .guyanaFlex .contentContainer, html.home .guyanaFlex .imgContainer {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  html.home .gallery .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html.home .gallery .wrapper .galleryItem {
+    width: 100%;
+    padding: 30px 0;
+  }
+  html.home .itemContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html.home .itemContainer .items {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  html.home .planAhead, html.home .newLocations {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html.home .planAhead .imgContainer, html.home .planAhead .contentContainer, html.home .newLocations .imgContainer, html.home .newLocations .contentContainer {
+    width: 100%;
+  }
+  html.home .planAhead .imgContainer img, html.home .planAhead .contentContainer img, html.home .newLocations .imgContainer img, html.home .newLocations .contentContainer img {
+    -webkit-box-shadow: 0 0;
+            box-shadow: 0 0;
+  }
+  html.home .banner {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  html.home .gallery {
+    display: none;
+  }
 }
