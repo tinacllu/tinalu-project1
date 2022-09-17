@@ -24,6 +24,25 @@
         .headerContent {
             left: clamp(10%, 2vw, 32%);
         }
+        .planAhead, .newLocations {
+            .imgContainer {
+                transform: translateY(0);
+                width: 50%;
+                img {
+                    box-shadow: none;
+                    width: 100%;
+                }
+            }
+            .contentContainer {
+                text-align: center;
+                padding: 0 30px 50px;
+            }
+        }
+        .freeTrip {
+            .wrapper {
+                padding: 0px 50px 50px;
+            }
+        }
     }
     html.contact {
         .contact.wrapper {
@@ -35,6 +54,7 @@
         .contactInfo {
             transform: translateY(0vh);
             text-align: center;
+            padding: 0;
             .socialMedia {
                 justify-content: center;
             }
@@ -113,9 +133,6 @@
                 }
             }
         }
-        .banner {
-            display: none;
-        }
     }
 
     html.blog {
@@ -129,10 +146,16 @@
 }
 
 @media (max-width: 480px) {
+    header {
+        height: clamp(300px, 90vh, 500px);
+    }
 
     html.blog {
         .comment1, .comment2 {
             flex-direction: column;
+            .imgContainer {
+                margin: 0 0 25px 0;
+            }
         }
     }
     

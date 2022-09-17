@@ -7,6 +7,7 @@ html.contact {
         font-size: clamp((calc(3.5 * $baseFontSize)), 10vw, (calc(5.438 * $baseFontSize)));
         color: white;
         margin-left: 5vw;
+        transform: translateY(clamp(-600px, -30vh, -300px));
     }
 }
 
@@ -18,7 +19,8 @@ html.contact {
 
 .getInTouch {
     transform: translateY(clamp(-600px, -30vh, -300px));
-    form {
+    width: 65%;
+    .formContainer {
         min-width: 645px;
         background-color: white;
         padding: 50px;
@@ -31,7 +33,7 @@ html.contact {
     display: flex;
     flex-direction: column;
     padding: 0 0 0 100px;
-    transform: translateY(10vh);
+    transform: translateY(clamp(-100px, -30vh, 300px));
     a, i {
         transition:0.3s;
         &:hover, &:focus {

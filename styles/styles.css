@@ -505,6 +505,59 @@ html.contact header {
   background-image: url("../assets/contact-image-1.jpg");
 }
 
+footer {
+  font-size: clamp(0.75rem, 2.5vw, 1.25rem);
+  background-color: #2C2C2C;
+  text-align: center;
+  color: #FAFFFE;
+}
+footer p {
+  margin: 0;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 50px 0;
+}
+form button {
+  width: 100%;
+  border: none;
+}
+
+input, textarea {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  -webkit-transition: 2ms;
+  transition: 2ms;
+}
+input:focus, input:hover, textarea:focus, textarea:hover {
+  background-color: rgba(80, 227, 194, 0.25);
+}
+
+input {
+  border-bottom: 2px solid #50E3C2;
+  width: 48%;
+  min-width: 250px;
+  margin-top: 10px;
+}
+
+textarea {
+  border: 2px solid #50E3C2;
+  width: 100%;
+  margin: 50px 0;
+  height: 25vh;
+  min-height: 200px;
+  max-height: 250px;
+}
+
 .guyana {
   background-color: #FAFFFE;
   padding: 150px 0 50px;
@@ -691,7 +744,6 @@ html.contact header {
 .planning .planAhead img {
   -webkit-box-shadow: 20px 20px #50E3C2;
           box-shadow: 20px 20px #50E3C2;
-  width: 100%;
 }
 .planning .newLocations {
   -webkit-box-orient: horizontal;
@@ -721,7 +773,7 @@ html.contact header {
 }
 .freeTrip .wrapper {
   text-align: center;
-  padding: 100px;
+  padding: 70px 100px 100px;
 }
 .freeTrip .wrapper p {
   margin-bottom: 30px;
@@ -731,59 +783,6 @@ html.contact header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-footer {
-  font-size: clamp(0.75rem, 2.5vw, 1.25rem);
-  background-color: #2C2C2C;
-  text-align: center;
-  color: #FAFFFE;
-}
-footer p {
-  margin: 0;
-}
-
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 50px 0;
-}
-form button {
-  width: 100%;
-  border: none;
-}
-
-input, textarea {
-  border: none;
-  outline: none;
-  padding: 10px 20px;
-  -webkit-transition: 2ms;
-  transition: 2ms;
-}
-input:focus, input:hover, textarea:focus, textarea:hover {
-  background-color: rgba(80, 227, 194, 0.25);
-}
-
-input {
-  border-bottom: 2px solid #50E3C2;
-  width: 48%;
-  min-width: 250px;
-  margin-top: 10px;
-}
-
-textarea {
-  border: 2px solid #50E3C2;
-  width: 100%;
-  margin: 50px 0;
-  height: 25vh;
-  min-height: 200px;
-  max-height: 250px;
 }
 
 html.blog {
@@ -877,6 +876,8 @@ html.blog .findOutMore {
 }
 
 .comments {
+  -webkit-transform: translateY(clamp(-500px, -20vh, -200px));
+          transform: translateY(clamp(-500px, -20vh, -200px));
   width: 65%;
 }
 .comments .wrapper {
@@ -915,6 +916,8 @@ html.contact h1 {
   font-size: clamp(3.5rem, 10vw, 5.438rem);
   color: white;
   margin-left: 5vw;
+  -webkit-transform: translateY(clamp(-600px, -30vh, -300px));
+          transform: translateY(clamp(-600px, -30vh, -300px));
 }
 
 .contact.wrapper {
@@ -930,8 +933,9 @@ html.contact h1 {
 .getInTouch {
   -webkit-transform: translateY(clamp(-600px, -30vh, -300px));
           transform: translateY(clamp(-600px, -30vh, -300px));
+  width: 65%;
 }
-.getInTouch form {
+.getInTouch .formContainer {
   min-width: 645px;
   background-color: white;
   padding: 50px;
@@ -949,8 +953,8 @@ html.contact h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 0 0 100px;
-  -webkit-transform: translateY(10vh);
-          transform: translateY(10vh);
+  -webkit-transform: translateY(clamp(-100px, -30vh, 300px));
+          transform: translateY(clamp(-100px, -30vh, 300px));
 }
 .contactInfo a, .contactInfo i {
   -webkit-transition: 0.3s;
@@ -984,6 +988,23 @@ html.contact h1 {
   html.home .headerContent {
     left: clamp(10%, 2vw, 32%);
   }
+  html.home .planAhead .imgContainer, html.home .newLocations .imgContainer {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    width: 50%;
+  }
+  html.home .planAhead .imgContainer img, html.home .newLocations .imgContainer img {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 100%;
+  }
+  html.home .planAhead .contentContainer, html.home .newLocations .contentContainer {
+    text-align: center;
+    padding: 0 30px 50px;
+  }
+  html.home .freeTrip .wrapper {
+    padding: 0px 50px 50px;
+  }
   html.contact .contact.wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -997,6 +1018,7 @@ html.contact h1 {
     -webkit-transform: translateY(0vh);
             transform: translateY(0vh);
     text-align: center;
+    padding: 0;
   }
   html.contact .contactInfo .socialMedia {
     -webkit-box-pack: center;
@@ -1086,9 +1108,6 @@ html.contact h1 {
     -webkit-box-shadow: 0 0;
             box-shadow: 0 0;
   }
-  html.home .banner {
-    display: none;
-  }
   html.blog .sidebar {
     display: none;
   }
@@ -1097,11 +1116,17 @@ html.contact h1 {
   }
 }
 @media (max-width: 480px) {
+  header {
+    height: clamp(300px, 90vh, 500px);
+  }
   html.blog .comment1, html.blog .comment2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  html.blog .comment1 .imgContainer, html.blog .comment2 .imgContainer {
+    margin: 0 0 25px 0;
   }
   html.home .gallery {
     display: none;

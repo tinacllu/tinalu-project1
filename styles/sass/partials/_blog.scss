@@ -94,6 +94,7 @@ html.blog {
 }
 
 .comments {
+    transform: translateY(clamp(-500px, -20vh, -200px));
     width: 65%;
     .wrapper {
         margin-left: 10%;
@@ -120,6 +121,7 @@ html.blog {
         margin-bottom: 75px;
     }
 }
+
 
 
 
