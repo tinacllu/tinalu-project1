@@ -1,12 +1,36 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-//general header styling
 header {
-    background-image: url(../assets/home-image-1.jpg);
     background-size: cover;
-    height: 90vh;
-    position: relative;
+    height: clamp(300px, 90vh, 800px);
+    .navBar {
+        @include flexStyle(space-between, center);
+        text-transform: uppercase;
+        ul {
+            @include flexStyle();
+            li {
+                color: white;
+                &:hover, &:focus {
+                    color: $greenishCyan;
+                }
+            }
+        }
+    }
+    .hamburger, .break {
+        display: none;
+        i {
+            color: white;
+        }
+    }
+    .break {
+        flex-basis: 100%;
+        height: 0;
+    }     
+}
+
+html.home {
+    background-image: url(../assets/home-image-1.jpg);
     .headerContent {
         position: absolute; 
         top: 50%;
@@ -30,39 +54,7 @@ header {
     }
 }
 
-.navBar {
-    @include flexStyle(space-between, center);
-    text-transform: uppercase;
-    ul {
-        @include flexStyle();
-        li {
-            color: white;
-            &:hover, &:focus {
-                color: $greenishCyan;
-            }
-        }
-    }
-}
-
-//hamburger menu styling
-.hamburger, .break {
-    display: none;
-}
-
-.hamburger > i {
-    color: white;
-}
-
-.break {
-    flex-basis: 100%;
-    height: 0;
-}
-
-//page specific styling 
 html.blog, html.contact {
-    header {
-        background-image: url("../assets/blog-image-1.jpg");
-    }
     .headerContent {
         h1 {
             font-size: clamp((calc(3.5 * $baseFontSize)), 10vw, (calc(5.438 * $baseFontSize)))
@@ -72,8 +64,13 @@ html.blog, html.contact {
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        height: 55vh;
-        max-height: 60vh;
+        height: clamp(230px, 55vh, 550px);
+    }
+}
+
+html.blog {
+    header {
+        background-image: url("../assets/blog-image-1.jpg");
     }
 }
 

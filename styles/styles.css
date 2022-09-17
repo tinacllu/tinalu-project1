@@ -422,35 +422,10 @@ button:hover, button:focus {
 }
 
 header {
-  background-image: url(../assets/home-image-1.jpg);
   background-size: cover;
-  height: 90vh;
-  position: relative;
+  height: clamp(300px, 90vh, 800px);
 }
-header .headerContent {
-  position: absolute;
-  top: 50%;
-  left: 32%;
-  z-index: 10;
-}
-header .headerContent h1 {
-  font-size: clamp(2.5rem, 5vw, 3.875rem);
-}
-header .headerContent span {
-  font-size: clamp(3rem, 10vw, 6.95rem);
-  display: block;
-  line-height: clamp(3rem, 10vw, 8rem);
-}
-header .headerImage {
-  -webkit-transform: translateY(20vh);
-          transform: translateY(20vh);
-  width: 40%;
-}
-header .headerImage img {
-  width: 100%;
-}
-
-.navBar {
+header .navBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,7 +439,7 @@ header .headerImage img {
       flex-wrap: wrap;
   text-transform: uppercase;
 }
-.navBar ul {
+header .navBar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -477,30 +452,50 @@ header .headerImage img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.navBar ul li {
+header .navBar ul li {
   color: white;
 }
-.navBar ul li:hover, .navBar ul li:focus {
+header .navBar ul li:hover, header .navBar ul li:focus {
   color: #50E3C2;
 }
-
-.hamburger, .break {
+header .hamburger, header .break {
   display: none;
 }
-
-.hamburger > i {
+header .hamburger i, header .break i {
   color: white;
 }
-
-.break {
+header .break {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   height: 0;
 }
 
-html.blog header, html.contact header {
-  background-image: url("../assets/blog-image-1.jpg");
+html.home {
+  background-image: url(../assets/home-image-1.jpg);
 }
+html.home .headerContent {
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  z-index: 10;
+}
+html.home .headerContent h1 {
+  font-size: clamp(2.5rem, 5vw, 3.875rem);
+}
+html.home .headerContent span {
+  font-size: clamp(3rem, 10vw, 6.95rem);
+  display: block;
+  line-height: clamp(3rem, 10vw, 8rem);
+}
+html.home .headerImage {
+  -webkit-transform: translateY(20vh);
+          transform: translateY(20vh);
+  width: 40%;
+}
+html.home .headerImage img {
+  width: 100%;
+}
+
 html.blog .headerContent, html.contact .headerContent {
   color: white;
   position: static;
@@ -513,11 +508,14 @@ html.blog .headerContent, html.contact .headerContent {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  height: 55vh;
-  max-height: 60vh;
+  height: clamp(230px, 55vh, 550px);
 }
 html.blog .headerContent h1, html.contact .headerContent h1 {
   font-size: clamp(3.5rem, 10vw, 5.438rem);
+}
+
+html.blog header {
+  background-image: url("../assets/blog-image-1.jpg");
 }
 
 html.contact header {
@@ -765,12 +763,6 @@ footer p {
   margin: 0;
 }
 
-html.contact footer {
-  width: 100%;
-  position: absolute;
-  bottom: -60%;
-}
-
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -832,6 +824,7 @@ html.blog h5 {
   margin: 0;
 }
 html.blog h6 {
+  font-size: 1.25rem;
   color: #063974;
   font-weight: normal;
   font-style: italic;
@@ -986,14 +979,6 @@ html.contact {
   padding: 0;
 }
 
-@media (max-width: 1200px) {
-  html.contact .headerContent, html.blog .headerContent {
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    max-width: 1400px;
-  }
-}
 @media (max-width: 1024px) {
   html.home .headerImage {
     display: none;
@@ -1022,32 +1007,30 @@ html.contact {
   }
 }
 @media (max-width: 768px) {
-  .hamburger {
+  header .hamburger {
     display: block;
     background-color: transparent;
     border: none;
   }
-  .navLinks {
+  header .navLinks {
     display: none;
     width: 100%;
   }
-  .navLinks ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+  header .navLinks ul {
+    position: absolute;
+    right: 5%;
+    left: 5%;
   }
-  .navLinks ul a {
+  header .navLinks ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+    text-align: right;
+  }
+  header .navLinks ul a {
     padding-right: 0;
   }
-  .hamburger, .break {
+  header .hamburger, header .break {
     display: block;
-  }
-  header {
-    max-height: 500px;
   }
   html.home .guyanaFlex {
     -webkit-box-orient: vertical;
@@ -1104,15 +1087,18 @@ html.contact {
   html.home .banner {
     display: none;
   }
-  html.blog .headerContent, html.contact .headerContent {
-    top: -120px;
-  }
   input {
     min-width: 0px;
     width: 100%;
   }
 }
 @media (max-width: 480px) {
+  header {
+    height: clamp(300px, 90vh, 500px);
+  }
+  html.blog .headerContent, html.contact .headerContent {
+    height: clamp(150px, 55vh, 280px);
+  }
   html.home .gallery {
     display: none;
   }
