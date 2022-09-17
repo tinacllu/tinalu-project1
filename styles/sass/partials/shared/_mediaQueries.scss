@@ -44,6 +44,14 @@
             }
         }
     }
+    html.blog{
+        .sidebar {
+            display: none;
+        }
+        .postContent, .comments {
+            width: 80%;
+        }
+    }
     html.contact {
         .contact.wrapper {
             flex-direction: column;
@@ -91,12 +99,10 @@
             display: block;
         }
     }
-
     input {
         min-width: 0px;
         width: 100%;
     }
-
     html.home {
         .guyanaFlex {
             flex-direction: column;
@@ -134,7 +140,6 @@
             }
         }
     }
-
     html.blog {
         .sidebar {
             display: none;
@@ -149,7 +154,6 @@
     header {
         height: clamp(300px, 90vh, 500px);
     }
-
     html.blog {
         .comment1, .comment2 {
             flex-direction: column;
@@ -158,13 +162,11 @@
             }
         }
     }
-    
     html.home {
         .gallery {
             display: none;
         }
     }
-
 }
 
 @media (max-width: 360px) {

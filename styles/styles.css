@@ -545,7 +545,6 @@ input:focus, input:hover, textarea:focus, textarea:hover {
 input {
   border-bottom: 2px solid #50E3C2;
   width: 48%;
-  min-width: 250px;
   margin-top: 10px;
 }
 
@@ -936,7 +935,6 @@ html.contact h1 {
   width: 65%;
 }
 .getInTouch .formContainer {
-  min-width: 645px;
   background-color: white;
   padding: 50px;
   -webkit-box-shadow: 20px 20px #50E3C2;
@@ -1004,6 +1002,12 @@ html.contact h1 {
   }
   html.home .freeTrip .wrapper {
     padding: 0px 50px 50px;
+  }
+  html.blog .sidebar {
+    display: none;
+  }
+  html.blog .postContent, html.blog .comments {
+    width: 80%;
   }
   html.contact .contact.wrapper {
     -webkit-box-orient: vertical;

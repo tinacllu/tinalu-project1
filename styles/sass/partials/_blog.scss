@@ -1,5 +1,5 @@
-@use "./variables" as *;
-@use "./mixins" as *;
+@use "./shared/variables" as *;
+@use "./shared/mixins" as *;
 
 html.blog {
     background-color: $iceBlue;
@@ -72,7 +72,7 @@ html.blog {
 .sidebar {
     width: 20%;
     position: absolute;
-    top: calc(110vh);
+    top: 110vh;
     right: 0vw;
     background-color: white;
     padding: 0 0 25px 25px;

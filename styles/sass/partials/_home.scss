@@ -1,5 +1,5 @@
-@use "./variables" as *;
-@use "./mixins" as *;
+@use "./shared/variables" as *;
+@use "./shared/mixins" as *;
 
 .guyana {
     background-color: $iceBlue;

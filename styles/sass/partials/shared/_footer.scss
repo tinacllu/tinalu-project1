@@ -1,5 +1,4 @@
 @use "./variables" as *;
-@use "./mixins" as *;
 
 footer {
     font-size: clamp((calc(0.75 * $baseFontSize)), 2.5vw, (calc(1.25 * $baseFontSize)));
