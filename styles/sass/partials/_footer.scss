@@ -2,7 +2,19 @@
 @use "./mixins" as *;
 
 footer {
+    font-size: clamp((calc(0.75 * $baseFontSize)), 2.5vw, (calc(1.25 * $baseFontSize)));
     background-color: $black;
     text-align: center;
     color: $iceBlue;
+    p {
+        margin: 0;
+    }
+}
+
+html.contact {
+    footer {
+        width: 100%;
+        position: absolute;
+        bottom: -60%;
+    }
 }

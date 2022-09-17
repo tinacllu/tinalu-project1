@@ -503,8 +503,18 @@ html.blog header, html.contact header {
 }
 html.blog .headerContent, html.contact .headerContent {
   color: white;
-  left: 5%;
-  max-width: 1400px;
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 55vh;
+  max-height: 60vh;
 }
 html.blog .headerContent h1, html.contact .headerContent h1 {
   font-size: clamp(3.5rem, 10vw, 5.438rem);
@@ -746,9 +756,19 @@ html.contact header h1 {
 }
 
 footer {
+  font-size: clamp(0.75rem, 2.5vw, 1.25rem);
   background-color: #2C2C2C;
   text-align: center;
   color: #FAFFFE;
+}
+footer p {
+  margin: 0;
+}
+
+html.contact footer {
+  width: 100%;
+  position: absolute;
+  bottom: -60%;
 }
 
 form {
@@ -966,6 +986,14 @@ html.contact {
   padding: 0;
 }
 
+@media (max-width: 1200px) {
+  html.contact .headerContent, html.blog .headerContent {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    max-width: 1400px;
+  }
+}
 @media (max-width: 1024px) {
   html.home .headerImage {
     display: none;
@@ -1017,6 +1045,9 @@ html.contact {
   }
   .hamburger, .break {
     display: block;
+  }
+  header {
+    max-height: 500px;
   }
   html.home .guyanaFlex {
     -webkit-box-orient: vertical;
@@ -1072,6 +1103,9 @@ html.contact {
   }
   html.home .banner {
     display: none;
+  }
+  html.blog .headerContent, html.contact .headerContent {
+    top: -120px;
   }
   input {
     min-width: 0px;
