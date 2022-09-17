@@ -4,6 +4,7 @@
 html.contact {
     background-color: $iceBlue;
 }
+
 .contact.wrapper {
     display: flex;
     justify-content: space-between;
@@ -24,16 +25,25 @@ html.contact {
     flex-direction: column;
     padding: 0 50px;
     transform: translateY(10vh);
+    a, i {
+        transition:0.3s;
+        &:hover, &:focus {
+            color: $greenishCyan;
+        }
+    }
     .socialMedia {
         display: flex;
+        
         li:first-child a {
             padding-left: 0;
         }
     }
     .email {
         font-weight: bold;
+        
         a {
             padding: 0;
+
         }
     }
 }

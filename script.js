@@ -6,5 +6,14 @@ $(".hamburger").on("click", function () {
     }
 });
 
-// if //windowsize max-width: 768
-// $(".navLinks").css({display: "block"});
+let mediaQuery = window.matchMedia('(max-width: 768px)');
+
+const displayNav = () => {
+    if (mediaQuery.matches) {
+        $(".navLinks").css({display: "none"});
+    } else {
+        $(".navLinks").css({display: "block"});
+    }
+}
+
+window.addEventListener('resize', displayNav);

@@ -68,12 +68,8 @@ html.blog, html.contact {
             font-size: clamp((calc(3.5 * $baseFontSize)), 10vw, (calc(5.438 * $baseFontSize)))
         }
         color: white;
-        position: static;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        height: 55vh;
-        max-height: 60vh;
+        left: 5%;
+        max-width: 1400px;
     }
 }
 

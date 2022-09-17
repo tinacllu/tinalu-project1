@@ -25,6 +25,21 @@
             left: clamp(10%, 2vw, 32%);
         }
     }
+    html.contact {
+        .contact.wrapper {
+            flex-direction: column;
+        }
+        .getInTouch, .contactInfo {
+            width: 100%;
+        }
+        .contactInfo {
+            transform: translateY(0vh);
+            text-align: center;
+            .socialMedia {
+                justify-content: center;
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -88,21 +103,7 @@
             display: none;
         }
     }
-    html.contact {
-        .contact.wrapper {
-            flex-direction: column;
-        }
-        .getInTouch, .contactInfo {
-            width: 100%;
-        }
-        .contactInfo {
-            transform: translateY(0vh);
-            text-align: center;
-            .socialMedia {
-                justify-content: center;
-            }
-        }
-    }
+
     input {
         min-width: 0px;
         width: 100%;
@@ -119,7 +120,9 @@
 }
 
 @media (max-width: 360px) {
-
+    input::placeholder, textarea::placeholder {
+        font-size: calc(1 * $baseFontSize);
+    }
 }
 
 @media (max-width: 320px) {
