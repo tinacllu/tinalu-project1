@@ -3,6 +3,11 @@
 
 html.contact {
     background-color: $iceBlue;
+    h1 {
+        font-size: clamp((calc(3.5 * $baseFontSize)), 10vw, (calc(5.438 * $baseFontSize)));
+        color: white;
+        margin-left: 5vw;
+    }
 }
 
 .contact.wrapper {
@@ -12,18 +17,20 @@ html.contact {
 }
 
 .getInTouch {
-    background-color: white;
-    width: 65%;
-    padding: 0 50px;
-    box-shadow: 20px 20px $greenishCyan;
-    transform: translateY(-15vh);
+    transform: translateY(clamp(-600px, -30vh, -300px));
+    form {
+        min-width: 645px;
+        background-color: white;
+        padding: 50px;
+        box-shadow: 20px 20px $greenishCyan;
+    }
 }
 
 .contactInfo {
     width: 30%;
     display: flex;
     flex-direction: column;
-    padding: 0 50px;
+    padding: 0 0 0 100px;
     transform: translateY(10vh);
     a, i {
         transition:0.3s;
@@ -33,17 +40,18 @@ html.contact {
     }
     .socialMedia {
         display: flex;
-        
         li:first-child a {
             padding-left: 0;
         }
     }
     .email {
         font-weight: bold;
-        
         a {
             padding: 0;
 
         }
+    }
+    .address {
+        font-size: calc(1 * $baseFontSize);
     }
 }

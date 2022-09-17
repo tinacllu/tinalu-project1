@@ -423,6 +423,7 @@ button:hover, button:focus {
 
 header {
   background-size: cover;
+  background-repeat: no-repeat;
   height: clamp(300px, 90vh, 800px);
 }
 header .navBar {
@@ -470,7 +471,7 @@ header .break {
   height: 0;
 }
 
-html.home {
+html.home header {
   background-image: url(../assets/home-image-1.jpg);
 }
 html.home .headerContent {
@@ -496,33 +497,12 @@ html.home .headerImage img {
   width: 100%;
 }
 
-html.blog .headerContent, html.contact .headerContent {
-  color: white;
-  position: static;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  height: clamp(230px, 55vh, 550px);
-}
-html.blog .headerContent h1, html.contact .headerContent h1 {
-  font-size: clamp(3.5rem, 10vw, 5.438rem);
-}
-
 html.blog header {
   background-image: url("../assets/blog-image-1.jpg");
 }
 
 html.contact header {
   background-image: url("../assets/contact-image-1.jpg");
-}
-html.contact header h1 {
-  margin-left: 5vw;
 }
 
 .guyana {
@@ -787,7 +767,7 @@ input, textarea {
   transition: 2ms;
 }
 input:focus, input:hover, textarea:focus, textarea:hover {
-  border: 2px solid #50E3C2;
+  background-color: rgba(80, 227, 194, 0.25);
 }
 
 input {
@@ -808,6 +788,10 @@ textarea {
 
 html.blog {
   background-color: #FAFFFE;
+}
+html.blog h1 {
+  font-size: clamp(3.5rem, 10vw, 5.438rem);
+  color: white;
 }
 html.blog h2 {
   margin-bottom: 0;
@@ -830,6 +814,9 @@ html.blog h6 {
   font-style: italic;
   margin: 0;
 }
+html.blog h6 span {
+  font-weight: bold;
+}
 html.blog .findOutMore {
   display: block;
   color: #0C5F4C;
@@ -839,31 +826,31 @@ html.blog .findOutMore {
 }
 
 .post {
+  -webkit-transform: translateY(clamp(-600px, -30vh, -300px));
+          transform: translateY(clamp(-600px, -30vh, -300px));
+}
+.post .postContent {
   width: 65%;
+}
+.post .contentBorder {
+  -webkit-transform: translateY(-2vh);
+          transform: translateY(-2vh);
+  padding: 4vh 0 2vh;
   border-bottom: 5px solid #50E3C2;
   border-right: 5px solid #50E3C2;
-  padding: 0 10px 10px 0;
-  -webkit-transform: translateY(-15vh);
-          transform: translateY(-15vh);
 }
-.post .wrapper {
+.post .contentBorder .contentContainer {
   margin-left: 10%;
   padding-right: 10%;
 }
-.post .wrapper .bold {
-  font-weight: bold;
-}
 .post .imgContainer {
-  width: calc(100% + 15px);
-  background-color: #50E3C2;
-  -webkit-box-shadow: inset 0px -10px white;
-          box-shadow: inset 0px -10px white;
-  border-right: 5px solid #50E3C2;
+  width: 100%;
+  padding: 0 20px 0 0;
 }
 .post .imgContainer img {
-  -webkit-transform: translateY(-25px);
-          transform: translateY(-25px);
-  width: calc(100% - 10px);
+  width: 100%;
+  -webkit-box-shadow: 20px 20px #50E3C2;
+          box-shadow: 20px 20px #50E3C2;
 }
 
 .sidebar {
@@ -894,6 +881,7 @@ html.blog .findOutMore {
 }
 .comments .wrapper {
   margin-left: 10%;
+  padding-right: 10%;
 }
 .comments .comment1, .comments .comment2 {
   display: -webkit-box;
@@ -923,6 +911,11 @@ html.blog .findOutMore {
 html.contact {
   background-color: #FAFFFE;
 }
+html.contact h1 {
+  font-size: clamp(3.5rem, 10vw, 5.438rem);
+  color: white;
+  margin-left: 5vw;
+}
 
 .contact.wrapper {
   display: -webkit-box;
@@ -935,13 +928,15 @@ html.contact {
 }
 
 .getInTouch {
+  -webkit-transform: translateY(clamp(-600px, -30vh, -300px));
+          transform: translateY(clamp(-600px, -30vh, -300px));
+}
+.getInTouch form {
+  min-width: 645px;
   background-color: white;
-  width: 65%;
-  padding: 0 50px;
+  padding: 50px;
   -webkit-box-shadow: 20px 20px #50E3C2;
           box-shadow: 20px 20px #50E3C2;
-  -webkit-transform: translateY(-15vh);
-          transform: translateY(-15vh);
 }
 
 .contactInfo {
@@ -953,7 +948,7 @@ html.contact {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 50px;
+  padding: 0 0 0 100px;
   -webkit-transform: translateY(10vh);
           transform: translateY(10vh);
 }
@@ -977,6 +972,9 @@ html.contact {
 }
 .contactInfo .email a {
   padding: 0;
+}
+.contactInfo .address {
+  font-size: 1rem;
 }
 
 @media (max-width: 1024px) {
@@ -1031,6 +1029,10 @@ html.contact {
   }
   header .hamburger, header .break {
     display: block;
+  }
+  input {
+    min-width: 0px;
+    width: 100%;
   }
   html.home .guyanaFlex {
     -webkit-box-orient: vertical;
@@ -1087,17 +1089,19 @@ html.contact {
   html.home .banner {
     display: none;
   }
-  input {
-    min-width: 0px;
+  html.blog .sidebar {
+    display: none;
+  }
+  html.blog .postContent, html.blog .comments {
     width: 100%;
   }
 }
 @media (max-width: 480px) {
-  header {
-    height: clamp(300px, 90vh, 500px);
-  }
-  html.blog .headerContent, html.contact .headerContent {
-    height: clamp(150px, 55vh, 280px);
+  html.blog .comment1, html.blog .comment2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   html.home .gallery {
     display: none;

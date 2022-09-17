@@ -3,6 +3,7 @@
 
 header {
     background-size: cover;
+    background-repeat: no-repeat;
     height: clamp(300px, 90vh, 800px);
     .navBar {
         @include flexStyle(space-between, center);
@@ -30,7 +31,9 @@ header {
 }
 
 html.home {
-    background-image: url(../assets/home-image-1.jpg);
+    header {
+        background-image: url(../assets/home-image-1.jpg);
+    }
     .headerContent {
         position: absolute; 
         top: 50%;
@@ -54,20 +57,6 @@ html.home {
     }
 }
 
-html.blog, html.contact {
-    .headerContent {
-        h1 {
-            font-size: clamp((calc(3.5 * $baseFontSize)), 10vw, (calc(5.438 * $baseFontSize)))
-        }
-        color: white;
-        position: static;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        height: clamp(230px, 55vh, 550px);
-    }
-}
-
 html.blog {
     header {
         background-image: url("../assets/blog-image-1.jpg");
@@ -77,8 +66,5 @@ html.blog {
 html.contact {
     header {
         background-image: url("../assets/contact-image-1.jpg");
-        h1 {
-            margin-left: 5vw;
-        }
     }
 }

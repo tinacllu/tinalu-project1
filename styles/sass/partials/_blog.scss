@@ -3,7 +3,10 @@
 
 html.blog {
     background-color: $iceBlue;
-
+    h1 {
+        font-size: clamp((calc(3.5 * $baseFontSize)), 10vw, (calc(5.438 * $baseFontSize)));
+        color: white;
+    }
     h2 {
         margin-bottom: 0;
     }
@@ -27,6 +30,9 @@ html.blog {
         font-weight: normal;
         font-style: italic;
         margin: 0;
+        span {
+            font-weight: bold;
+        }
     } 
 
     .findOutMore {
@@ -39,26 +45,26 @@ html.blog {
 }
 
 .post {
-    .wrapper {
-        margin-left: 10%;
-        padding-right: 10%;
-        .bold {
-            font-weight: bold;
+    transform: translateY(clamp(-600px, -30vh, -300px));
+    .postContent {
+        width: 65%;
+    }
+    .contentBorder {
+        transform: translateY(-2vh);
+        padding: 4vh 0 2vh;
+        border-bottom: 5px solid $greenishCyan;
+        border-right: 5px solid $greenishCyan;
+        .contentContainer {
+            margin-left: 10%;
+            padding-right: 10%;
         }
     }
-    width: 65%;
-    border-bottom: 5px solid $greenishCyan;
-    border-right: 5px solid $greenishCyan;
-    padding: 0 10px 10px 0;
-    transform: translateY(-15vh);
     .imgContainer {
-        width: calc(100% + 15px);
-        background-color: $greenishCyan;
-        box-shadow: inset 0px -10px white;
-        border-right: 5px solid $greenishCyan;
+        width: 100%;
+        padding: 0 20px 0 0;
         img {
-            transform: translateY(-25px);
-            width: calc(100% - 10px);
+            width: 100%;
+            box-shadow: 20px 20px $greenishCyan;
         }  
     }
 }
@@ -91,6 +97,7 @@ html.blog {
     width: 65%;
     .wrapper {
         margin-left: 10%;
+        padding-right: 10%;
     }
     .comment1, .comment2 {
         display: flex;

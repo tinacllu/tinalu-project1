@@ -17,7 +17,7 @@ input, textarea {
     padding: 10px 20px;
     transition: 2ms;
     &:focus, &:hover {
-        border: 2px solid $greenishCyan;
+        background-color: rgba($greenishCyan, 0.25);
     }
 }
 
