@@ -33,23 +33,29 @@ header {
 html.home {
     header {
         background-image: url(../assets/home-image-1.jpg);
+        position: relative;
     }
     .headerContent {
-        position: absolute; 
-        top: 50%;
-        left: 32%;
+        @include flexStyle(flex-end, flex-end, no-wrap);
+        min-height: 250px;
+        max-height: 700px;
+        height: 65vh;
+        width: 90%;
+        position: relative;
         z-index: 10;
         h1 {
-            font-size: clamp((calc(2.5 * $baseFontSize)), 5vw, (calc(3.875 * $baseFontSize)));
+            font-size: clamp((calc(2.25 * $baseFontSize)), 5vw, (calc(3.875 * $baseFontSize)));
         }
         span {
-            font-size: clamp((calc(3 * $baseFontSize)), 10vw, (calc(6.95 * $baseFontSize)));
+            font-size: clamp((calc(2 * $baseFontSize)), 10vw, (calc(6.95 * $baseFontSize)));
             display: block;
             line-height: clamp((calc(3 * $baseFontSize)), 10vw, (calc(8 * $baseFontSize)));
         }
     }
     .headerImage {
-        transform: translateY(20vh);
+        position: absolute;
+        bottom: 0;
+        transform: translateY(8vh);
         width: 40%;
         img {
             width: 100%;

@@ -53,6 +53,7 @@ h1.main {
     font-weight: bold;
     line-height: calc(3.625 * $baseFontSize);
     letter-spacing: calc(0.419 * $baseFontSize);
+    min-width: 0;
 }
 
 h2 {

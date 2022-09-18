@@ -3,7 +3,6 @@
 
 .guyana {
     background-color: $iceBlue;
-    padding: 150px 0 50px;
     .guyanaFlex {
         @include flexStyle(space-between, center, no-wrap);
         padding: 100px 0;
@@ -15,8 +14,8 @@
             }
         }
         .imgContainer {
-            width: 25%;
-            @include flexStyle(flex-end)
+            width: clamp(30%, 20vw, 35%);
+            @include flexStyle(flex-end);
         }
         img {
             box-shadow: -15px 15px $greenishCyan;
@@ -38,7 +37,6 @@
     }
 }
 
-
 .moreInfo {
     background-color: $iceBlue;
 }
@@ -48,9 +46,8 @@
     width: 100%;
     padding: 100px 0 75px;
     .items {
-        display: flex;
+        @include flexStyle(normal, flex-start);
         width: 50%;
-        align-items: flex-start;
         padding-bottom: 25px;
         .iconContainer {
             width: 10%;
@@ -133,7 +130,6 @@
         width: 100%;
     }
 }
-
 
 .freeTrip {
     background-color: $iceBlue;

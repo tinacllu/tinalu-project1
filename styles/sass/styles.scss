@@ -1,3 +1,4 @@
+// shared
 @use "./partials/shared/setup";
 @use "./partials/shared/variables" as *;
 @use "./partials/shared/typography";
@@ -6,7 +7,11 @@
 @use "./partials/shared/header";
 @use "./partials/shared/footer";
 @use "./partials/shared/form";
+
+// page-specific
 @use "./partials/home";
 @use "./partials/blog";
 @use "./partials/contact";
+
+// media queries
 @use "./partials/shared/mediaQueries";

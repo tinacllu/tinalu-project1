@@ -271,6 +271,7 @@ h1.main {
   font-weight: bold;
   line-height: 3.625rem;
   letter-spacing: 0.419rem;
+  min-width: 0;
 }
 
 h2 {
@@ -376,10 +377,6 @@ html {
 img {
   display: block;
   max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
   height: 100%;
 }
 
@@ -473,24 +470,40 @@ header .break {
 
 html.home header {
   background-image: url(../assets/home-image-1.jpg);
+  position: relative;
 }
 html.home .headerContent {
-  position: absolute;
-  top: 50%;
-  left: 32%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  min-height: 250px;
+  max-height: 700px;
+  height: 65vh;
+  width: 90%;
+  position: relative;
   z-index: 10;
 }
 html.home .headerContent h1 {
-  font-size: clamp(2.5rem, 5vw, 3.875rem);
+  font-size: clamp(2.25rem, 5vw, 3.875rem);
 }
 html.home .headerContent span {
-  font-size: clamp(3rem, 10vw, 6.95rem);
+  font-size: clamp(2rem, 10vw, 6.95rem);
   display: block;
   line-height: clamp(3rem, 10vw, 8rem);
 }
 html.home .headerImage {
-  -webkit-transform: translateY(20vh);
-          transform: translateY(20vh);
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(8vh);
+          transform: translateY(8vh);
   width: 40%;
 }
 html.home .headerImage img {
@@ -559,7 +572,6 @@ textarea {
 
 .guyana {
   background-color: #FAFFFE;
-  padding: 150px 0 50px;
 }
 .guyana .guyanaFlex {
   display: -webkit-box;
@@ -583,7 +595,7 @@ textarea {
   margin: 0 0 30px;
 }
 .guyana .guyanaFlex .imgContainer {
-  width: 25%;
+  width: clamp(30%, 20vw, 35%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -652,10 +664,15 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
   padding-bottom: 25px;
 }
 .itemContainer .items .iconContainer {
@@ -887,12 +904,14 @@ html.blog .findOutMore {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
 }
 .comments .comment1 .imgContainer, .comments .comment2 .imgContainer {
   margin: 10px 25px 0 0;
@@ -981,10 +1000,27 @@ html.contact h1 {
 
 @media (max-width: 1024px) {
   html.home .headerImage {
-    display: none;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-  html.home .headerContent {
-    left: clamp(10%, 2vw, 32%);
+  html.home .guyanaFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px 0;
+  }
+  html.home .guyanaFlex .contentContainer {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+  html.home .guyanaFlex .imgContainer {
+    margin-top: 70px;
+    width: 50%;
   }
   html.home .planAhead .imgContainer, html.home .newLocations .imgContainer {
     -webkit-transform: translateY(0);
@@ -1060,20 +1096,6 @@ html.contact h1 {
     min-width: 0px;
     width: 100%;
   }
-  html.home .guyanaFlex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 30px 0;
-  }
-  html.home .guyanaFlex .contentContainer, html.home .guyanaFlex .imgContainer {
-    width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0;
-  }
   html.home .gallery .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1123,6 +1145,13 @@ html.contact h1 {
   header {
     height: clamp(300px, 90vh, 500px);
   }
+  html.home .headerContent {
+    height: 45vh;
+    min-height: 230px;
+  }
+  html.home .gallery {
+    display: none;
+  }
   html.blog .comment1, html.blog .comment2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1131,9 +1160,6 @@ html.contact h1 {
   }
   html.blog .comment1 .imgContainer, html.blog .comment2 .imgContainer {
     margin: 0 0 25px 0;
-  }
-  html.home .gallery {
-    display: none;
   }
 }
 @media (max-width: 360px) {

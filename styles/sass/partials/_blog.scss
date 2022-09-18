@@ -101,9 +101,7 @@ html.blog {
         padding-right: 10%;
     }
     .comment1, .comment2 {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        @include flexStyle(space-between, flex-start, no-wrap);
         .imgContainer {
             margin: 10px 25px 0 0;
             min-width: 15vh;

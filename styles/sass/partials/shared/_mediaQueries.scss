@@ -1,28 +1,24 @@
-// Mobile - 360px
-// Large Mobile - 480px
-// Tablet - 768px
-// Tablet Landscape - 1024px
-// Laptop - 1200px
-// Desktop - 1440px
 @use "./variables" as *;
 
-//desktop
-@media (max-width: 1440px) {
-
-}
-
-//laptop
-@media (max-width: 1200px) {
-
-}
-
+//tablet landscape
 @media (max-width: 1024px) {
     html.home {
         .headerImage {
-            display: none;
+            transform: translateY(0);
         }
-        .headerContent {
-            left: clamp(10%, 2vw, 32%);
+        .guyanaFlex {
+            flex-direction: column;
+            padding: 30px 0;
+            .contentContainer {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                padding: 0;
+            }
+            .imgContainer {
+                margin-top: 70px;
+                width: 50%;
+            }
         }
         .planAhead, .newLocations {
             .imgContainer {
@@ -70,6 +66,7 @@
     }
 }
 
+//tablet
 @media (max-width: 768px) {
     header {
         .hamburger {
@@ -104,15 +101,7 @@
         width: 100%;
     }
     html.home {
-        .guyanaFlex {
-            flex-direction: column;
-            padding: 30px 0;
-            .contentContainer, .imgContainer {
-                width: 100%;
-                justify-content: center;
-                padding: 0;
-            }
-        }
+        
         .gallery {
             .wrapper {
                 flex-direction: column;
@@ -150,9 +139,19 @@
     }
 }
 
+//large mobile
 @media (max-width: 480px) {
     header {
         height: clamp(300px, 90vh, 500px);
+    }
+    html.home {
+        .headerContent {
+            height: 45vh;
+            min-height: 230px;
+        }
+        .gallery {
+            display: none;
+        }
     }
     html.blog {
         .comment1, .comment2 {
@@ -162,19 +161,11 @@
             }
         }
     }
-    html.home {
-        .gallery {
-            display: none;
-        }
-    }
 }
 
+//mobile
 @media (max-width: 360px) {
     input::placeholder, textarea::placeholder {
         font-size: calc(1 * $baseFontSize);
     }
-}
-
-@media (max-width: 320px) {
-    
 }
