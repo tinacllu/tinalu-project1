@@ -100,7 +100,7 @@ html.blog {
         margin-left: 10%;
         padding-right: 10%;
     }
-    .comment1, .comment2 {
+    .comment {
         @include flexStyle(space-between, flex-start, no-wrap);
         .imgContainer {
             margin: 10px 25px 0 0;
