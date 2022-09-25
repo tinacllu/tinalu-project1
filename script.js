@@ -44,11 +44,12 @@ nextArrow.addEventListener("click", () => {
   });
 
 previousArrow.addEventListener("click", () => {
-    console.log("left");
-    allImages[allImages.length-1].innerHTML = allImages[allImages.length - 2].innerHTML;
-    for (i = 0; i < allImages.length; i = i + 1) {
-        if (i < allImages.length - 1) {
-            allImages[i + 1].innerHTML = allImages[i].innerHTML;
+    allImages[allImages.length-1].innerHTML = allImages[0].innerHTML;
+    for (i = (allImages.length - 1); i >= 0; i = i - 1) {
+        if (i === 0) {
+            allImages[0].innerHTML = allImages[allImages.length - 1].innerHTML;
+        } else if (i > 0) {
+            allImages[i].innerHTML = allImages[i-1].innerHTML;
         }
     }
-})
+});

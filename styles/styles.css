@@ -418,6 +418,10 @@ button:hover, button:focus {
   text-decoration: underline;
 }
 
+#img4 {
+  display: none;
+}
+
 header {
   background-size: cover;
   background-repeat: no-repeat;
