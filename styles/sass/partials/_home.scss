@@ -37,6 +37,26 @@
     }
 }
 
+.carouselButton {
+    all: unset;
+    color: $greenishCyan;
+    position: absolute; 
+    // width: fit-content;
+    width: 20%;
+    
+    &:hover, &:focus {
+        cursor: pointer;
+    }
+    &.previous {
+        left: 5%;
+        background: linear-gradient(90deg, $lightLightBlue 50%, transparent 100%);
+    }
+    &.next {
+        right: 5%;
+        background: linear-gradient(90deg, transparent 50%, $lightLightBlue 100%);
+    }
+}
+
 .moreInfo {
     background-color: $iceBlue;
 }

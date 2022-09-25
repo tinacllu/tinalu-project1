@@ -641,6 +641,26 @@ textarea {
           justify-content: center;
 }
 
+.carouselButton {
+  all: unset;
+  color: #50E3C2;
+  position: absolute;
+  width: 20%;
+}
+.carouselButton:hover, .carouselButton:focus {
+  cursor: pointer;
+}
+.carouselButton.previous {
+  left: 5%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #D2F9F1), to(transparent));
+  background: linear-gradient(90deg, #D2F9F1 50%, transparent 100%);
+}
+.carouselButton.next {
+  right: 5%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), to(#D2F9F1));
+  background: linear-gradient(90deg, transparent 50%, #D2F9F1 100%);
+}
+
 .moreInfo {
   background-color: #FAFFFE;
 }
