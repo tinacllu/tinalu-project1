@@ -28,7 +28,7 @@ const formElement = document.querySelector("form");
 const userName = document.querySelector("#name");
 const userEmail = document.querySelector("#email");
 const userText = document.querySelector("#textBox");
-const comments = document.querySelectorAll(".comment");
+let comments = document.querySelectorAll(".comment");
 const commentsContainer = document.querySelector(".commentsContainer");
 
 formElement.addEventListener("submit", (event) => {
@@ -45,14 +45,14 @@ formElement.addEventListener("submit", (event) => {
 const addComment = () => {
     const newComment = document.createElement("div");
     newComment.classList.add(`comment`);
-    newComment.classList.add(`comment${comments.length + 1}`);
     newComment.innerHTML = 
         `<div class="imgContainer">
-             <img src=http://placekitten.com/>
+            <img src=http://placekitten.com/200/200>
          </div> 
          <div class="contentContainer">
-             <h5>${postTime} by ${userName.value}</h5>
-             <p>${userText.value}</p>
+            <h5>${postTime} by ${userName.value}</h5>
+            <p>${userText.value}</p>
          </div>`
+    comments = document.querySelectorAll(".comment");
     commentsContainer.insertBefore(newComment, formElement);
 }

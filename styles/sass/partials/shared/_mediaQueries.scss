@@ -102,7 +102,9 @@
     html.home {
         .gallery {
             .wrapper {
-                flex-direction: column;
+                #img1, #img3 {
+                    display: none;
+                }
                 .galleryItem{
                     width: 100%;
                     padding: 30px 0;
@@ -148,9 +150,6 @@
         }
         .items {
             flex-wrap:nowrap;
-        }
-        .gallery {
-            display: none;
         }
     }
     html.blog {

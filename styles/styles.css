@@ -1123,11 +1123,8 @@ html.contact h1 {
     min-width: 0px;
     width: 100%;
   }
-  html.home .gallery .wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  html.home .gallery .wrapper #img1, html.home .gallery .wrapper #img3 {
+    display: none;
   }
   html.home .gallery .wrapper .galleryItem {
     width: 100%;
@@ -1179,9 +1176,6 @@ html.contact h1 {
   html.home .items {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-  }
-  html.home .gallery {
-    display: none;
   }
   html.blog .comment1, html.blog .comment2 {
     -webkit-box-orient: vertical;
