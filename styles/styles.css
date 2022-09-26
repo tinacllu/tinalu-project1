@@ -939,19 +939,31 @@ html.blog .findOutMore {
           align-items: flex-start;
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
+  margin-bottom: 75px;
 }
 .comments .comment .imgContainer {
   margin: 10px 25px 0 0;
   min-width: 15vh;
+  max-width: 15vh;
 }
 .comments .comment .imgContainer img {
   width: 100%;
 }
+.comments .comment .contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 85%;
+}
 .comments .comment .contentContainer p {
   margin-top: 0;
-}
-.comments .comment1 {
-  margin-bottom: 75px;
 }
 
 html.contact {
@@ -1177,13 +1189,13 @@ html.contact h1 {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  html.blog .comment1, html.blog .comment2 {
+  html.blog .comment {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  html.blog .comment1 .imgContainer, html.blog .comment2 .imgContainer {
+  html.blog .comment .imgContainer {
     margin: 0 0 25px 0;
   }
 }

@@ -1,4 +1,3 @@
-//form
 const today = new Date();
 const weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const currentWeekday = weekday[today.getDay()];
@@ -23,7 +22,6 @@ const getDateSuffix = () => {
 
 const postTime = `${currentWeekday}, ${currentMonth} ${currentDate}${getDateSuffix()}, ${currentYear}`
 
-
 const formElement = document.querySelector("form");
 const userName = document.querySelector("#name");
 const userEmail = document.querySelector("#email");
@@ -39,7 +37,7 @@ formElement.addEventListener("submit", (event) => {
         userEmail.value = "";
         userText.value = "";
     }
-})
+});
 
 // add comment 
 const addComment = () => {
@@ -55,4 +53,4 @@ const addComment = () => {
          </div>`
     comments = document.querySelectorAll(".comment");
     commentsContainer.insertBefore(newComment, formElement);
-}
+};

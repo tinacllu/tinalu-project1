@@ -7,7 +7,6 @@ const submissionResponse = document.querySelector(".submissionResponse");
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
     if (userName.value && userEmail.value && userText.value) {
-        addComment();
         userName.value = "";
         userEmail.value = "";
         userText.value = "";
