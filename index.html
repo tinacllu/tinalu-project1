@@ -61,15 +61,24 @@
         
         <section class="gallery">
             <div class="wrapper">
-                <div class="galleryItem">
+                <div class="galleryItem image" id = "img1">
                     <img src="./assets/gallery-image1.jpg" alt="house on the beach at sunset">
                 </div>
-                <div class="galleryItem">
+                <div class="galleryItem image" id = "img2">
                     <img src="./assets/gallery-image2.jpg" alt="walkway to a beach house">
                 </div>
-                <div class="galleryItem">
+                <div class="galleryItem image" id = "img3">
                     <img src="./assets/gallery-image3.jpg" alt="house on the beach between palm trees">
                 </div>
+                <div hidden class="galleryItem image" id = "img4">
+                    <img src="./assets/gallery-image1.jpg" alt="house on the beach at sunset">
+                </div>
+                <button class="next carouselButton"> 
+                    <i class="fa-solid fa-chevron-right fa-3x"></i>
+                </button>
+                <button class="previous carouselButton">
+                    <i class="fa-solid fa-chevron-left fa-3x"></i>
+                </button>
             </div> <!-- .wrapper -->
         </section><!-- .gallery -->
 
@@ -173,6 +182,7 @@
     </footer>
 
     <script src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4='crossorigin='anonymous'></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <script src="./imageCarousel.js"></script>
 </body>
 </html>

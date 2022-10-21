@@ -100,23 +100,26 @@ html.blog {
         margin-left: 10%;
         padding-right: 10%;
     }
-    .comment1, .comment2 {
+    .comment {
         @include flexStyle(space-between, flex-start, no-wrap);
+        margin-bottom: 75px;
         .imgContainer {
             margin: 10px 25px 0 0;
             min-width: 15vh;
+            max-width: 15vh;
             img {
                 width: 100%;
             }
         }
         .contentContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width:85%;
             p {
                 margin-top: 0;
             }    
         }
-    }
-    .comment1 {
-        margin-bottom: 75px;
     }
 }
 

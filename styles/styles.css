@@ -418,6 +418,10 @@ button:hover, button:focus {
   text-decoration: underline;
 }
 
+#img4 {
+  display: none;
+}
+
 header {
   background-size: cover;
   background-repeat: no-repeat;
@@ -570,6 +574,11 @@ textarea {
   max-height: 250px;
 }
 
+.submissionResponse {
+  text-align: center;
+  display: none;
+}
+
 .guyana {
   background-color: #FAFFFE;
 }
@@ -639,6 +648,24 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.carouselButton {
+  all: unset;
+  color: #50E3C2;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.carouselButton:hover, .carouselButton:focus {
+  cursor: pointer;
+}
+.carouselButton.previous {
+  left: 5%;
+}
+.carouselButton.next {
+  right: 5%;
 }
 
 .moreInfo {
@@ -900,7 +927,7 @@ html.blog .findOutMore {
   margin-left: 10%;
   padding-right: 10%;
 }
-.comments .comment1, .comments .comment2 {
+.comments .comment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -912,19 +939,31 @@ html.blog .findOutMore {
           align-items: flex-start;
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
+  margin-bottom: 75px;
 }
-.comments .comment1 .imgContainer, .comments .comment2 .imgContainer {
+.comments .comment .imgContainer {
   margin: 10px 25px 0 0;
   min-width: 15vh;
+  max-width: 15vh;
 }
-.comments .comment1 .imgContainer img, .comments .comment2 .imgContainer img {
+.comments .comment .imgContainer img {
   width: 100%;
 }
-.comments .comment1 .contentContainer p, .comments .comment2 .contentContainer p {
-  margin-top: 0;
+.comments .comment .contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 85%;
 }
-.comments .comment1 {
-  margin-bottom: 75px;
+.comments .comment .contentContainer p {
+  margin-top: 0;
 }
 
 html.contact {
@@ -1096,11 +1135,8 @@ html.contact h1 {
     min-width: 0px;
     width: 100%;
   }
-  html.home .gallery .wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  html.home .gallery .wrapper #img1, html.home .gallery .wrapper #img3 {
+    display: none;
   }
   html.home .gallery .wrapper .galleryItem {
     width: 100%;
@@ -1153,16 +1189,13 @@ html.contact h1 {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  html.home .gallery {
-    display: none;
-  }
-  html.blog .comment1, html.blog .comment2 {
+  html.blog .comment {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  html.blog .comment1 .imgContainer, html.blog .comment2 .imgContainer {
+  html.blog .comment .imgContainer {
     margin: 0 0 25px 0;
   }
 }

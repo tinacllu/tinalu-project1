@@ -1,3 +1,4 @@
+// hamburger menu
 $(".hamburger").on("click", function () {
     if ($(".navLinks").css("display") == "none") {
         $(".navLinks").css({display: "block"});
@@ -6,7 +7,7 @@ $(".hamburger").on("click", function () {
     }
 });
 
-let mediaQuery = window.matchMedia('(max-width: 768px)');
+const mediaQuery = window.matchMedia('(max-width: 768px)');
 
 const displayNav = () => {
     if (mediaQuery.matches) {
@@ -17,3 +18,4 @@ const displayNav = () => {
 }
 
 window.addEventListener('resize', displayNav);
+

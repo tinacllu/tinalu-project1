@@ -37,6 +37,22 @@
     }
 }
 
+.carouselButton {
+    all: unset;
+    color: $greenishCyan;
+    position: absolute; 
+    width: fit-content;
+    &:hover, &:focus {
+        cursor: pointer;
+    }
+    &.previous {
+        left: 5%;
+    }
+    &.next {
+        right: 5%;
+    }
+}
+
 .moreInfo {
     background-color: $iceBlue;
 }

@@ -48,13 +48,14 @@
                 <div class="formContainer">
                     <form class="form">
                         <label for="name" hidden>Name</label>
-                        <input type="text" placeholder="Name" id="name">
+                        <input type="text" placeholder="Name" id="name" required>
                         <label for="email" hidden>Email Address</label>
-                        <input type="email" placeholder="Email address" id="email">
-                        <label for="messageBox" hidden>Message</label>
-                        <textarea placeholder="Message" id="messageBox" cols="50" rows="10"></textarea>
-                        <button type="submit">Submit</button>
+                        <input type="email" placeholder="Email address" id="email" required>
+                        <label for="textBox" hidden>Message</label>
+                        <textarea placeholder="Message" id="textBox" cols="50" rows="10" required></textarea>
+                        <button id="submit" type="submit">Submit</button>
                     </form> <!--comments-->  
+                    <p class="submissionResponse">Your message has been submitted!</p>
                 </div> <!--formContainer--> 
             </section> <!--getInTouch-->
 
@@ -96,6 +97,7 @@
     </footer>
 
     <script src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4='crossorigin='anonymous'></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <script src="./contact.js"></script>
 </body>
 </html>

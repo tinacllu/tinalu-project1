@@ -88,9 +88,9 @@
         </aside> <!-- sidebar -->
 
         <section class="comments">
-            <div class="wrapper">
+            <div class="wrapper commentsContainer">
                 <h3>Comments:</h3>
-                <div class="comment1">
+                <div class="comment comment1">
                     <div class="imgContainer">
                         <img src="./assets/comment-image.jpg" alt="headshot of man with beard">
                     </div> <!-- imgContainer -->
@@ -99,7 +99,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati a suscipit hic tenetur! Quasi, sit ab autem iusto quas expedita praesentium? Excepturi a numquam eligendi?</p>
                     </div> <!-- contentContainer -->
                 </div> <!--comment1-->
-                <div class="comment2">
+                <div class="comment comment2">
                     <div class="imgContainer">
                         <img src="./assets/comment-image2.jpg" alt="headshot of man with beard">
                     </div> <!-- imgContainer -->
@@ -110,12 +110,12 @@
                 </div> <!--comment2-->
                 <form class="form">
                     <label for="name" hidden>Name</label>
-                    <input type="text" placeholder="Name" id="name">
+                    <input type="text" placeholder="Name" id="name" required>
                     <label for="email" hidden>Email Address</label>
-                    <input type="email" placeholder="Email address" id="email">
-                    <label for="commentBox" hidden>Comment</label>
-                    <textarea placeholder="Comment" id="commentBox" cols="50" rows="20"></textarea>
-                    <button type="submit">Post Comment</button>
+                    <input type="email" placeholder="Email address" id="email" required>
+                    <label for="textBox" hidden>Comment</label>
+                    <textarea placeholder="Comment" id="textBox" cols="50" rows="20" required></textarea>
+                    <button id="submit" type="submit">Post Comment</button>
                 </form> <!--form-->   
             </div><!-- wrapper --> 
         </section> <!--comments-->
@@ -126,6 +126,7 @@
     </footer>
 
     <script src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4='crossorigin='anonymous'></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <script src="./blog.js"></script>
 </body>
 </html>
